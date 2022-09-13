@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--Atividade de hoje:
+    Refatorar atividade desenvolvida como aula12 que segue anexo aqui.
+    Copiar e modificar para cadastrar Pessoa Física ou Jurídica.
+    Incluir campos:
+      Tipo de Passoa - exibir input de CPF ou CNPJ conforme tipo selecionado
+      Telefone Celular e Fixo
+      Endereço
+      Estado Civil
+      Sexo
+    Incluir ainda validação e mascara para os inputs que for necessário.
+    Ao final exibir na tela em um alert os dados inseridos. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/explorer.png" type="image/x-icon">
+    <title>UC12-Formulário de Contato</title>
+
+    <title></title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulário de Contato</h1>
+    </header>
+    <div class="container">
+        <form action="" method="">
+            <div class="row">
+                <div class="col_1">
+                    <label for="nome">Nome: </label>
+                </div>
+                <div class="col_2">
+                    <input id="nome" name="nome" type="text" placeholder="Nome aqui..." />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col_1">
+                    <label for="email">e-mail: </label>
+                </div>
+                <div class="col_2">
+                    <input id="email" name="email" type="text" placeholder="e-mail aqui..." />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col_1">
+                    <label for="phone">Telefone: </label>
+                </div>
+                <div class="col_2">
+                    <input id="fixo" name="fixo" type="text" placeholder="(XX) XXXX-XXXX" />
+                </div>
+                <div class="col_2">
+                    <input id="celular" name="celular" type="text" placeholder="(XX) XXXXX-XXXX" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col_1">
+                    <label for="end">Endereço: </label>
+                </div>
+                <div class="col_2">
+                    <input id="end" name="end" type="text" placeholder="Digite seu endereço" />
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col_1">
+                    <label>Estado civil</label>
+                </div>
+
+                <div class="col_2">
+                    <input type="radio" id="casado" name="estado" value="casado">
+                    <label for="casado">Casado</label>
+                    <input type="radio" id="solteiro" name="estado" value="solteiro">
+                    <label for="solteiro">Solteiro</label>
+                    <input type="radio" id="divorciado" name="estado" value="divorciado">
+                    <label for="divorciado">Divorciado</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col_1">
+                    <label>Sexo</label>
+                </div>
+
+                <div class="col_2">
+                    <input type="radio" id="fem" name="sexo" value="fem">
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="masc" name="sexo" value="masc">
+                    <label for="masc">Masculino</label>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col_1">
+                    <label for="cidade">Cidade: </label>
+                </div>
+                <div class="col_2">
+                    <select id="cidade" name="cidade">
+                        <option value="">Selecione...</option>
+                        <option value="POA">Porto Alegre</option>
+                        <option value="GRV">Gravataí</option>
+                        <option value="CAC">Cachoeirinha</option>
+                        <option value="VIM">Viamão</option>
+                        <option value="CAN">Canoas</option>
+                        <option value="SAP">Sapucaia</option>
+                        <option value="SLEO">São Leopoldo</option>
+                        <option value="ALV">Alvorada</option>
+                        <option value="GRA">Gramado</option>
+                        <option value="CANE">Canela</option>
+                        <option value="DIRMAO">Dois Irmãos</option>
+                        <option value="EST">Esteio</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col_1">
+                    <label>Pessoa</label>
+                </div>
+
+                <div class="col_2">
+                    <input type="radio" id="fis" name="pessoa" value="fis" oninput="habilitaCampo()">
+                    <label for="fis">Física</label>                   
+                    <input type="radio" id="jur" name="pessoa" value="jur" oninput="habilitaCampo()" >
+                    <label for="jur">Jurídica</label>    
+                    <input type="text" id="txtfis" value="cpf" placeholder="Digite aqui seu CPF">     
+                    <input type="text" id="txtjur" value="cnpj" placeholder="Digite aqui seu Cnpj">           
+                </div>
+          
+            <div class="row">
+                <input type="reset" value="Limpar" />
+                <input type="submit" value="Enviar" />
+            </div>
+        </form>
+    </div>
+    <footer>
+        &copy; Todos os direitos reservados
+    </footer>
+</body>
+<script src="arquivo.js"></script>
+
+</html>
