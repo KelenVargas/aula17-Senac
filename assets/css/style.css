@@ -76,6 +76,8 @@ h1{
 footer{
     text-align: center;
 }
+
+
 @media screen and (max-width: 600px){
 	.col_1, .col_2, input[type=submit], input[type=reset]{
 		width: 100%;
@@ -84,6 +86,7 @@ footer{
 		background-color: green;
 	}
 }
+
 
 
 

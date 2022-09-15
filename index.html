@@ -29,7 +29,7 @@
         <h1>Formulário de Contato</h1>
     </header>
     <div class="container">
-        <form action="" method="">
+        <form name= "form" action="" method="">
             <div class="row">
                 <div class="col_1">
                     <label for="nome">Nome: </label>
@@ -43,7 +43,7 @@
                     <label for="email">e-mail: </label>
                 </div>
                 <div class="col_2">
-                    <input id="email" name="email" type="text" placeholder="e-mail aqui..." />
+                    <input id="email" name="email" type="email" placeholder="e-mail aqui..." />
                 </div>
             </div>
             <div class="row">
@@ -51,10 +51,10 @@
                     <label for="phone">Telefone: </label>
                 </div>
                 <div class="col_2">
-                    <input id="fixo" name="fixo" type="text" placeholder="(XX) XXXX-XXXX" />
+                    <input id="fixo" name="fixo" type="text" oninput="maskPhone(this)" placeholder="(XX) XXXX-XXXX" />
                 </div>
                 <div class="col_2">
-                    <input id="celular" name="celular" type="text" placeholder="(XX) XXXXX-XXXX" />
+                    <input id="celular" name="celular" type="text" oninput="maskPhone(this)" placeholder="(XX) XXXXX-XXXX" />
                 </div>
             </div>
             <div class="row">
@@ -127,13 +127,13 @@
                     <label for="fis">Física</label>                   
                     <input type="radio" id="jur" name="pessoa" value="jur" oninput="habilitaCampo()" >
                     <label for="jur">Jurídica</label>    
-                    <input type="text" id="txtfis" value="cpf" placeholder="Digite aqui seu CPF">     
-                    <input type="text" id="txtjur" value="cnpj" placeholder="Digite aqui seu Cnpj">           
+                    <input type="text" id="txtfis" value="" oninput="maskCPF(this)" placeholder="Digite aqui seu CPF">     
+                    <input type="text" id="txtjur" value="" oninput="maskCNPJ(this)" placeholder="Digite aqui seu Cnpj">           
                 </div>
           
             <div class="row">
                 <input type="reset" value="Limpar" />
-                <input type="submit" value="Enviar" />
+                <input type="submit" value="Enviar" onclick="return validarCampos()"/>
             </div>
         </form>
     </div>
